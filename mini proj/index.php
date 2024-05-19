@@ -43,6 +43,7 @@
     <a href="services.php">Services</a>
     <a href="login.php">Login</a>
     <a href="display.php">Display</a>
+    <a href="qrreader.php">Scan using QR</a> <!-- New navlink -->
 </div>
 <div>
     <img src="https://github.com/Girlwithasmile/Rakshak/blob/main/homepage1.png?raw=true" width="1540px">

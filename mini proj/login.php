@@ -3,84 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
+    <title>Login Page</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-image: "https://github.com/Girlwithasmile/Rakshak/blob/main/homepage1.png?raw=true";
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.login-form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-}
-
-.login-form h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 95%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    color: #fff;
-    background-color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
+            margin: 0;
+            padding: 0;
+            background-image: url('Designer.png'); /* Update the path to your image */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #fff; /* Set font color to white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            position: relative;
+            width: 90%; /* Adjusted width for better responsiveness */
+            max-width: 600px; /* Limit maximum width */
+            padding: 40px; /* Increased padding */
+            background: rgba(0, 0, 0, 0.7); /* Darken the background and set opacity */
+            border-radius: 20px; /* Increased border radius */
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px 0; /* Increased padding to make buttons squarer */
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px; /* Rounded corners */
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff; /* Set button background color to white */
+            color: #333; /* Set button text color to dark */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .btn:hover {
+            background-color: #f0f0f0; /* Lighten button background on hover */
+        }
+        .home-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: #fff; /* Set home button color to white */
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <form class="login-form" action="login.php" method="post">
-            <h2>Login</h2>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit"><a href="index.php">Login</button>
-        </form>
+    <div class="container">
+        <i class="fas fa-home home-btn" onclick="goHome()"></i>
+        <button class="btn" onclick="loginAsParent()">Login as Parent</button>
+        <button class="btn" onclick="loginAsTeacher()">Login as Teacher</button>
+        <button class="btn" onclick="loginAsCanteen()">Login as Canteen Superintendant</button>
+        <button class="btn" onclick="loginAsMedicine()">Login as Infirmary</button>
     </div>
+
+    <!-- JavaScript for redirecting home -->
+    <script>
+        function goHome() {
+            // Redirect to home page or any desired location
+            window.location.href = "index.php";
+        }
+        function loginAsParent() {
+            // Redirect to login page for parent
+            window.location.href = "login_parent.php";
+        }
+        function loginAsTeacher() {
+            // Redirect to login page for teacher
+            window.location.href = "login_teacher.php";
+        }
+
+        function loginAsCanteen() {
+            // Redirect to login page for teacher
+            window.location.href = "login_canteen.php";
+        }
+
+        function loginAsMedicine() {
+            // Redirect to login page for teacher
+            window.location.href = "login_medicine.php";
+        }
+    </script>
 </body>
 </html>
